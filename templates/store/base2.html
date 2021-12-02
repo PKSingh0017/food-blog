@@ -1,0 +1,162 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>
+  {% if title %}
+  {{title}} | 
+  {% endif %}
+  Food Sense
+  </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/logo.svg' %}" rel="icon">
+  <link href="{% static 'img/logo.svg' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  {% block extra_head %}
+  {% endblock %}
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'core/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'core/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'core/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'core/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'core/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'core/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'core/css/bootstrap-tagsinput.css' %}" rel="stylesheet">
+  <!-- FontAwesome JS-->
+    <script defer src="{% static 'fontawesome/js/all.min.js' %}"></script>
+  {% comment %} <link href="{% static 'core/css/slick.css' %}" rel="stylesheet"> {% endcomment %}
+  <link rel="stylesheet" href="{% static 'core/css/bootstrap-side-modals.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.13/dist/semantic.min.css">
+	<link rel="stylesheet" href="{% static 'multiselect/css/style.css' %}">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'core/css/style.css' %}" rel="stylesheet">
+  <script>
+  $(".post-slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    nextArrow: $("#next1"),
+    prevArrow: $("#prev1"),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+  </script>
+  {% block extra_scripts %}
+  {% endblock %}
+</head>
+
+<body>
+
+  <header id="header" class="fixed-top {% block innerpage_navbar %}{% endblock %}">
+  {% include "store/navbar.html" %}
+  </header>
+
+  {% if messages %}
+  <!--BODY-->
+  <main role="main" class="container-fluid">
+    <div class="mt-5 pt-4" style="position: absolute;top: 10px;right: 17px; z-index: 100;">
+      {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% endfor %}
+    {% endif %}
+    </div>
+  </main>
+  {% endif %}
+
+  {% block content %}
+  {% endblock %}
+
+  {% include "store/footer.html" %}
+  
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'core/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'core/js/pkss.js' %}"></script>
+  <script src="{% static 'core/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  {% comment %} <script src="{% static 'core/vendor/php-email-form/validate.js' %}"></script> {% endcomment %}
+  <script src="{% static 'core/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'core/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'core/js/bootstrap-tagsinput.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'core/js/main.js' %}"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  {% comment %} <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> {% endcomment %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.2.13/dist/semantic.min.js"></script>
+  <script src="{% static 'multiselect/js/main.js' %}"></script>
+
+  <!-- Slick js files -->
+  {% comment %} <script src="{% static 'core/js/slick.js' %}"></script>
+  <script src="{% static 'core/js/slick.min.js' %}"></script> {% endcomment %}
+  
+
+
+</body>
+
+</html>

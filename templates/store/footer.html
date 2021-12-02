@@ -1,0 +1,186 @@
+ {% load static %}
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container">
+        <h3><img href="/" src="{% static 'img/logo.svg' %}" style="height: 75px;width: 75px;" alt="logo" class="shadow-1-strong"></h3>
+        
+        <div class="row">
+            <div class="col-lg-3 col-md-6 footer-links">
+            </div>
+            <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                {% for key, val in Extras.items %}
+                <a href="{% url 'docs' key %}">{{val.name}}</a>
+                <br> {% endfor %}
+                <a href="{% url 'download-brochure' %}">Download Brochure</a>
+                <hr>
+                <a href="" style="cursor:pointer" title="Want a Distribution?" data-toggle="modal" data-target="#distributionForm">Become a Distributor <small><i class="fa fa-arrow-right"></i></small></a>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-links">
+                <h5>Subscribe to our Newsletter</h5>
+                <form action="{% url 'subscribe_newsletter' %}" method="post">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="input-group mb-3 mt-4"> <input type="text" class="form-control" placeholder="Enter email" name="subscriber_email" aria-label="Recipient's username" aria-describedby="button-addon2"> <button class="btn btn-outline-warning" type="submit" id="button-addon2">Subscribe</button> </div>
+                    </div>
+                </form>
+                <br>
+                <div class="social-links">
+                    <a target="blank" href="{{SocialMedia.links.twitter}}" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a target="blank" href="{{SocialMedia.links.facebook}}" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a target="blank" href="{{SocialMedia.links.instagram}}" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a target="blank" href="{{SocialMedia.links.linkedin}}" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    {% if user.is_superuser %}
+                        <i class="bx bx-edit-alt" style="cursor:pointer" title="Edit This Section" data-toggle="modal" data-target="#updateSocialMedia"></i>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-links">
+            </div>
+        </div>
+        <br>
+        
+        <div class="copyright">
+            &copy; Copyright <strong><span>Foodsense</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/ -->
+            Designed by <a href="https://bagdigital.in/">Business Application Group</a>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<!-- ======= Distribution form ======= -->
+<div class="modal modal-right fade" id="distributionForm" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Distribution form.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <form action="{% url 'distribution_form' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="session-title" class="col-form-label">Name:</label>
+                        <input type="text" name="name" placeholder="Your Name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Session-description" class="col-form-label">Email ID:</label>
+                        <input type="text" name="email" placeholder="Your Email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Session-description" class="col-form-label">Contact Number:</label>
+                        <input type="text" name="contact_number" placeholder="Your Phone Number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Session-description" class="col-form-label">Description:</label>
+                        <textarea name="description" cols="30" rows="5" placeholder="Description" class="form-control"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-outline-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ======= Distribution form ======= -->
+
+<!-- ======= edit Newsletter ======= -->
+<div class="modal modal-right fade" id="updateNewsletter" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit "{{Newsletter.title}}" section</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <form action="{% url 'edit_Newsletter' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="session-title" class="col-form-label">Session Title:</label>
+                        <input type="text" name="title" value="{{Newsletter.title}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Session-description" class="col-form-label">Session Description:</label>
+                        <input type="text" name="description" value="{{Newsletter.description}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Session-description" class="col-form-label">Session Description:</label>
+                        <input type="text" name="button" value="{{Newsletter.button}}" class="form-control">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Update Session</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ======= edit TeaNewsletterm ======= -->
+
+<!-- ======= edit Social Media ======= -->
+<div class="modal modal-right fade" id="updateSocialMedia" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit "{{SocialMedia.title}}" section</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <form action="{% url 'edit_SocialMedia' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="session-title" class="col-form-label">Title:</label>
+                        <input type="text" name="title" value="{{SocialMedia.title}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Session-description" class="col-form-label">Description:</label>
+                        <input type="text" name="description" value="{{SocialMedia.description}}" class="form-control">
+                    </div>
+                    <hr>
+                    <h3>Profile Links</h3>
+                    <div class="form-group">
+                        <label for="Session-description" class="col-form-label">Facebook:</label>
+                        <input type="text" name="links_facebook" value="{{SocialMedia.links.facebook}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Session-description" class="col-form-label">Twitter:</label>
+                        <input type="text" name="links_twitter" value="{{SocialMedia.links.twitter}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Session-description" class="col-form-label">GitHub:</label>
+                        <input type="text" name="links_github" value="{{SocialMedia.links.github}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Session-description" class="col-form-label">Instagram:</label>
+                        <input type="text" name="links_instagram" value="{{SocialMedia.links.instagram}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Session-description" class="col-form-label">LinkedIn:</label>
+                        <input type="text" name="links_linkedin" value="{{SocialMedia.links.linkedin}}" class="form-control">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ======= edit Social Media ======= -->

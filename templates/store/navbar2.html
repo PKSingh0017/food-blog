@@ -1,0 +1,45 @@
+  {% load static %}
+  <!-- ======= Header ======= -->
+  
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="{% url 'home' %}">
+      <img href="/" src="{% static 'img/logo.svg' %}" style="height: 75px;width: 75px;" alt="logo" class="shadow-1-strong">
+      
+      </a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto {% if title %}{% else %} active {% endif %}" href="{% url 'home' %}#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'home' %}#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li class="dropdown"><a href="{% url 'home' %}#services">
+            <span>
+              <strong><i class="bx bxs-user" style="cursor:pointer"></i></strong> Account
+            </span> 
+            <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              {% if user.is_authenticated %}
+                <li><a href="{% url 'account_logout' %}">Logout</a></li>
+              {% else %}
+                <li><a href="{% url 'account_login' %}">Login</a></li>
+              {% endif %}
+              {% if user.is_superuser %}
+                <li><a href="{% url 'home' %}">Sale</a></li>
+              {% endif %}
+              {% if user.is_authenticated %}
+                <li><a href="{% url 'home' %}">My Profile</a></li>
+              {% endif %}
+            </ul>
+          </li>
+          {% comment %} <li  style="margin-left: 30px; cursor:pointer"><h2 class="text-white"><i class="bx bxs-cart"></i></h2></li> {% endcomment %}
+          {% comment %} <li><a class="getstarted scrollto" href="#" data-toggle="modal" data-target="#scheduleDemoForm"><strong><i class="bx bxs-cart"></i></strong> Cart</a></li> {% endcomment %}
+          
+        </ul>
+        <h2 style="margin-left: 30px; margin-right: 15px; margin-top: 10px; cursor:pointer" class="text-white"><i class="bx bxs-cart"></i></h2>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div><!-- End Header -->

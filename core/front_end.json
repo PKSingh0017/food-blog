@@ -1,0 +1,191 @@
+{
+    "Hero": {
+        "title": "Best Peanut Butters",
+        "description": "Buy the best quality peanut butter",
+        "button": "buy now",
+        "video_link": "https://youtu.be/Lz346RdkEkI"
+    },
+    "AboutUs": {
+        "title": "ABOUT US",
+        "description1": "We are a strategical driven IT( Information and Technology) consulting services group with deep expertise in driving digital transformation across industries. We connect business with technology; and with the right talent together, our offerings include ",
+        "point1": "Internet based Cross- platform applications and products service provider",
+        "point2": "Strategic Digital Marketing services",
+        "point3": "Industry specific CRM Implementation services \u2013 Salesforce, Hubspot, etc",
+        "description2": "Some of the best brains of technology and marketing industry are part of BAG. Our strategic digital transformation approach not only delivers value-based state of the art solutions but also help customer create a thriving revenue stream."
+    },
+    "WhyUs": {
+        "title": "BAG is driving digital transformation across various industry verticals",
+        "description": "The fourth wave of industrial revolution is pushing industries GO DIGITAL",
+        "q1": {
+            "q": "I am a small business owner, do I need a digital solution to grow my business?",
+            "a": "With internet dominating the customer perceptions, and growing competition, digital transformation is not a choice, it's a necessity for the business today irrespective of the industry segment your business falls in."
+        },
+        "q2": {
+            "q": "How important is Customer Experience for a business?",
+            "a": "CX or customer experience is at the core of every business, digital transformation brings businesses close to customers and enable them with tools required to deliver an excellent customer experience."
+        },
+        "q3": {
+            "q": "Is BAG the right choice for my business's digital journey?",
+            "a": "We are at the center of the fourth industrial revolution, our strategic design thinking approach, deep expertise in Internet based solutions, digital marketing and customer relationship management driven by AI, ML, SaaS platforms, latest technologies and experience of delivering successful solutions across various industry verticals makes us right choice for our customers to drive their digital transformation journey."
+        }
+    },
+    "Skills": {
+        "title": "BAG is a group of expert consultants, strategy leaders, marketeers and designers",
+        "description": "Our deep expertise in digital transformation is at the core of our experience on technologies, strategies and concepts we are experienced in",
+        "skill1": {
+            "name": "FULL STACK WEB DEVELOPMENT - DJango, React, JAVA, Wordpress, PhP, CSS, etc",
+            "value": "100"
+        },
+        "skill2": {
+            "name": "STRATEGIC DIGITAL MARKETING - SEO, SMM, SMO, e-mail marketing, Viral marketing, etc",
+            "value": "100"
+        },
+        "skill3": {
+            "name": "DESIGNING AND CONTENT MARKETING",
+            "value": "100"
+        },
+        "skill4": {
+            "name": "CUSTOMER RELATIONSHIP MANAGEMENT (CRM) - Salesforce, Hubspot, Infusionsoft, etc ",
+            "value": "100"
+        }
+    },
+    "Services": {
+        "title": "SERVICES",
+        "description": "Our GO DIGITAL slogan is at the heart of our offerings. We are a thriving technology group, focused on connecting business with technology; and with the right talent together, our services entails",
+        "service1": {
+            "title": "Internet Based Services and Products",
+            "description": "Internet based Web and Mobile application services and products"
+        },
+        "service2": {
+            "title": "Strategic Digital Marketing and Branding",
+            "description": "An expert team of digital marketeers to promote your brand online"
+        },
+        "service3": {
+            "title": "Graphics and Designs. Content Marketing",
+            "description": "A team of brand experts to help your business thrive with great designs and content skills"
+        },
+        "service4": {
+            "title": "CRM Implementation Services",
+            "description": "Deep expertise in Industry specific CRM implementation and support - Salesforce, Hubspot, etc"
+        }
+    },
+    "CTA": {
+        "title": "Schedule a Meeting with our Expert",
+        "description": "If you are looking for a digital solution for your business- it could be web portal or a website, digital marketing, designing, content or you would like to seek advice to grow your business digitally; our team of expert consultants is here to help you out. Schedule an online meeting with us",
+        "button": "Schedule Meeting"
+    },
+    "Portfolio": {
+        "title": "PORTFOLIO",
+        "description": "Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas."
+    },
+    "Team": {
+        "title": "TEAM",
+        "description": "Meet our team of talented young professionals who are setting trends in the IT industry with their innovative ideas, strategies and quality of work. Our customers are at the heart of our team and we strive to deliver great customer experience that reflects in our work ethics "
+    },
+    "FAQ": {
+        "title": "FREQUENTLY ASKED QUESTIONS",
+        "description": "If you are planning to transform your business from traditional to something state of the art digitally driven business and would like to grow your ROIs and revenues, BAG offers a complete package to set start your digital transformation journey."
+    },
+    "Contact": {
+        "title": "CONTACT US",
+        "description": "Fill this form to contact us and ask about our products",
+        "address": {
+            "street": "197/191 Farrashi tola,kutub khana",
+            "city": "Bareilly",
+            "country": "India",
+            "pin": "243003",
+            "location_link": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d438.8506924321541!2d79.4165971!3d28.3647282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a007ed70a2e945%3A0x6c91deeaa2a49872!2sFoodSense%20Health%20Foods!5e0!3m2!1sen!2sin!4v1627130886010!5m2!1sen!2sin"
+        },
+        "phone_number": "+9174172 23643,+91 8279779012,+91 8433075625",
+        "email": "info@foodsense.store"
+    },
+    "SocialMedia": {
+        "title": "Our Social Networks",
+        "description": "Get connected with us",
+        "links": {
+            "facebook": "#https://www.facebook.com/FoodSense-health-foods-101822385167561/",
+            "linkedin": "#",
+            "twitter": "#",
+            "instagram": "#https://instagram.com/foodsensehealthfoods?utm_medium=copy_link",
+            "github": "#"
+        }
+    },
+    "Newsletter": {
+        "title": "Join Our Newsletter",
+        "description": "Subscribe Us",
+        "button": "Subscribe"
+    },
+    "RequestDemo": {
+        "path": "Schedule a Meeting",
+        "title": "Fill out this form and our expert advisor will be in touch with you",
+        "Sidebar": {
+            "title": "We are Expert in",
+            "description": {
+                "1": "<strong>Internet Based Services and Products</strong>: Websites, Web Portals and Mobile application services and products",
+                "2": "<strong>Strategic Digital Marketing and Branding</strong>: An expert team of digital marketeers to promote your brand online",
+                "3": "<strong>Graphics and Designs. Content Marketing</strong>: A team of brand experts to help your business thrive with great designs and content skills",
+                "4": "<strong>CRM Implementation Services</strong>: Deep expertise in Industry specific CRM implementation and support - Salesforce, Hubspot, etc"
+            }
+        },
+        "about": {
+            "title": "Schedule a Meeting",
+            "description": "If you are looking for a digital solution for your business- it could be web portal or a website, digital marketing, designing, content or you would like to seek advice to grow your business digitally; our team of expert consultants is here to help you out. Schedule an online meeting with us"
+        }
+    },
+    "Careers": {
+        "path": "Careers",
+        "title": "Fill out this form to work with us.",
+        "Sidebar": {
+            "title": "We are Expert in",
+            "description": {
+                "1": "<strong>Internet Based Services and Products</strong>: Websites, Web Portals and Mobile application services and products.",
+                "2": "<strong>Strategic Digital Marketing and Branding</strong>: An expert team of digital marketeers to promote your brand online.",
+                "3": "<strong>Graphics and Designs. Content Marketing:</strong> A team of brand experts to help your business thrive with great designs and content skills.",
+                "4": "<strong>CRM Implementation Services:</strong> Deep expertise in Industry specific CRM implementation and support - Salesforce, Hubspot, etc."
+            }
+        },
+        "about": {
+            "title": "Work with us",
+            "description": "Join BAG and give your career a direction. We have exciting openings for talented young professionals. Watch out this space for recent opportunities at BAG. Set start your career journey with BAG!"
+        }
+    },
+    "Customers": {
+        "path": "Customers",
+        "title": "Fill out this form to work with us.",
+        "Sidebar": {
+            "title": "We are Expert in",
+            "description": {
+                "1": "<strong>Internet Based Services and Products</strong>: Websites, Web Portals and Mobile application services and products.",
+                "2": "<strong>Strategic Digital Marketing and Branding</strong>: An expert team of digital marketeers to promote your brand online.",
+                "3": "<strong>Graphics and Designs. Content Marketing:</strong> A team of brand experts to help your business thrive with great designs and content skills.",
+                "4": "<strong>CRM Implementation Services:</strong> Deep expertise in Industry specific CRM implementation and support - Salesforce, Hubspot, etc."
+            }
+        },
+        "about": {
+            "title": "Work with us",
+            "description": "Join BAG and give your career a direction. We have exciting openings for talented young professionals. Watch out this space for recent opportunities at BAG. Set start your career journey with BAG!"
+        }
+    },
+    "Extras": {
+        "terms_and_conditions": {
+            "name": "Terms and conditions",
+            "title": "Terms and Conditions",
+            "content": "<h2>TERMS & CONDITIONS</h2>\r\n\r\n<p>\r\nThe terms \u201cWe\u201d / \u201cUs\u201d / \u201cOur\u201d/\u201dCompany\u201d individually and collectively refer to * FoodSense*, and the\r\nterms \u201cVisitor\u201d \u201dUser\u201d refer to the users.\r\n</p>\r\n<p>\r\nThis page states the Terms and Conditions under which you (Visitor) may visit this website\r\n(www.foodsense.store). Please read this page carefully. If you do not accept the Terms and Conditions\r\nstated here, we would request you to exit this site. The business, any of its business divisions and / or its\r\nsubsidiaries, associate companies or subsidiaries to subsidiaries or such other investment companies (in\r\nIndia or abroad) reserve their respective rights to revise these Terms and Conditions at any time by\r\nupdating this posting. You should visit this page periodically to re-appraise yourself of the Terms and\r\nConditions, because they are binding on all users of this Website.\r\n</p>\r\n<h3>USE OF CONTENT</h3>\r\n<p>\r\nAll logos, brands, marks headings, labels, names, signatures, numerals, shapes or any combinations thereof, appearing in this site, except as otherwise noted, are properties either owned, or used under license, by the business and / or its associate entities who feature on this Website. The use of these properties or any other content on this site, except as provided in these terms and conditions or in the site content, is strictly prohibited.\r\n\r\n\r\nYou may not sell or modify the content of this Website  or reproduce, display, publicly perform, distribute, or otherwise use the materials in any way for any public or commercial purpose without the respective organization\u2019s or entity\u2019s written permission.\r\n\r\n<h3>ACCEPTABLE WEBSITE USE</h3>\r\n\r\n<p>(A)\tSecurity Rules\r\n\r\nVisitors are prohibited from violating or attempting to violate the security of the Web site, including, without limitation, (1) accessing data not intended for such user or logging into a server or account which the user is not authorised to access, (2) attempting to probe, scan or test the vulnerability of a system or network or to breach security or authentication measures without proper authorisation, (3) attempting to interfere with service to any user, host or network, including, without limitation, via means of submitting a virus or \u201cTrojan horse\u201d to the Website, overloading, \u201cflooding\u201d, \u201cmail bombing\u201d or \u201ccrashing\u201d, or (4) sending unsolicited electronic mail, including promotions and/or advertising of products or services. Violations of system or network security may result in civil or criminal liability. The business and / or its associate entities will have the right to investigate occurrences that they suspect as involving such violations and will have the right to involve, and cooperate with, law enforcement authorities in prosecuting users who are involved in such violations.\r\n\r\n\r\n\r\n(B)\tGeneral Rules\r\nVisitors may not use the Web Site in order to transmit, distribute, store or destroy material (a) that could constitute or encourage conduct that would be considered a criminal offence or violate any applicable law or regulation, (b) in a manner that will infringe the copyright, trademark, trade secret or other intellectual property rights of others or violate the privacy or publicity of other personal rights of others, or (c) that is libellous, defamatory, pornographic, profane, obscene, threatening, abusive or hateful.\r\n\r\n</p>\r\n<h3>LIABILITY</h3>\r\n<p>\r\nUser agrees that neither us nor our group companies, directors, officers or employee shall be liable for any direct or/and indirect or/and incidental or/and special or/and consequential or/and exemplary damages, resulting from the use or/and the inability to use the service or/and for cost of procurement of substitute goods or/and services or resulting from any goods or/and data or/and information or/and services purchased or/and obtained or/and messages received or/and transactions entered into through or/and from the service or/and resulting from unauthorized access to or/and alteration of user\u2019s transmissions or/and data or/and arising from any other matter relating to the service, including but not limited to, damages for loss of profits or/and use or/and data or other intangible, even if we has been advised of the possibility of such damages.\r\n\r\n\r\nUser further agrees that we shall not be liable for any damages arising from interruption, suspension or termination of service, including but not limited to direct or/and indirect or/and incidental or/and special consequential or/and exemplary damages, whether such interruption or/and suspension or/and termination was justified or not, negligent or intentional, inadvertent or advertent.\r\n\r\nUser agrees that we shall not be responsible or liable to user, or anyone, for the statements or conduct of any third party of the service. In sum, in no event shall Company\u2019s total liability to the User for all damages or/and losses or/and causes of action exceed the amount paid by the User to us, if any, that is related to the cause of action.\r\n\r\n</p>\r\n<h3>DISCLAIMER OF CONSEQUENTIAL DAMAGES</h3>\r\n<p>\r\nIn no event shall Company or any parties, organizations or entities associated with the corporate brand name us or otherwise, mentioned at this Website be liable for any damages whatsoever (including, without limitations, incidental and consequential damages, lost profits, or damage to computer hardware or loss of data information or business interruption) resulting from the use or inability to use the Website and the Website material, whether based on warranty, contract, tort, or any other legal theory, and whether or not, such organization or entities were advised of the possibility of such damages.\r\n</p>\r\n\r\n\r\n\r\n\r\n"
+        },
+        "shipping_and_delivery": {
+            "name": "Shipping & Delivery",
+            "title": "SHIPPING & DELIVERY",
+            "content": "<h2>SHIPPING & Delivery</h2>\r\n<p>\r\nEven though we are a website, and we function 24x7, recipient business hours are from 09.00 to 19.00 hours Monday to Saturday. All orders will be prepared and dispatched within 2 working days of placement of order with our preferred carriers. Even though delivery time is stipulated and not in our ultimate control, we expect the customer to receive the ordered product within 3-5 working days of dispatch.\r\n</p>"
+        },
+        "privacy_policy": {
+            "name": "Privacy Policy",
+            "title": "PRIVACY POLICY",
+            "content": "<h1>Introduction</h1>\r\n\r\n<p>\r\nThe domain name www.foodsense.store is owned and operated by (\u201cfoodsense or \u201cWe\u201d or \u201cUs\u201d). We value the trust you have in us. Therefore, we insist upon the highest standards for secure transactions and customer information privacy.\r\n\r\nThis Privacy Policy (\u201cPolicy\u201d) describes the type of personal information we collect from our User, purpose for collecting such information, how we use it, with whom we share it and the choices available to our customers regarding our use of the information. We will not disclose the personal information and sensitive information (meanings ascribed in clause 2 below) shared by the user other than in compliance with this Policy. If you do not consent to any of the terms enumerated in this Policy, do not proceed to use the Site.\r\n\r\nOur Policy is subject to change at any time without notice. Your continued use of the Site following such changes to the Policy constitutes your acceptance of the changed Policy and to be bound by such changes. If you do not continue to use the Site following change in the policy but take no action with respect to your personal information and sensitive information with us, our use of your personal information and sensitive information shall remain subject to the Policy in effect prior to the change. You are responsible for periodically reviewing this Policy in order to be aware of any changes thereto.\r\n\r\n</p>\r\n\r\n\r\n<h3>WHAT WE COLLECT</h3>\r\n\r\n<p>\r\nWe may collect personal identifiable information from you when you save or otherwise provide us when you set up a free account with the Site OR when you communicate with us via phone, email, chat, etc OR when you fill an entry to participate in any contest, promotion or survey, etc. OR use the service of Gift Card on the Site OR when you participate at one of our events, etc. As a result of these actions you might supply us with personal information, such as your name, e-mail and postal addresses, phone number(s), credit card information, names of people to whom purchases have been shipped including address and telephone numbers, IP addresses, product interest information and in certain circumstances, your opinions and individual preferences, etc (collectively \u201cPersonal Information\u201d). When you visit this Site, our social media platforms, or our social networking or mobile applications, may also collect certain information about your device or usage by automated means or by using technologies such as cookies, web server logs and web beacons.\r\n\r\nYou may also provide us with information like financial information such as Bank account or credit card or debit card or other payment instrument details, password, physical health condition; medical history, sex, etc. (collectively \u201cSensitive Information\u201d) for availing the services at our Site.\r\n\r\nWe may also maintain a record of your product interests and acquire information about you from our present and/or future affiliates.\r\n\r\nThis Site is directed to be used by adults only who are above the age of 18 years. If you are not an adult, while you may look at our Site, but you should not make a purchase, register, or submit personal information to us. We or our associates / affiliates do not knowingly collect information from minors. Minors should not be using the Site with any personal information. In an event of default by the minor, the parent or the guardian will be liable to compensate for whatsoever damages arising out of such wrongful use by the minor.\r\n\r\n</p>\r\n\r\n<h3>WHAT IS THE PURPOSES FOR WHICH THE PERSONAL AND SENSITIVE INFORMATION IS COLLECTED</h3>\r\n\r\n<p>\r\nFoodsense may use your Personal Information collected:\r\n\r\nSend you or your friends, relatives or associates, products that you have ordered;\r\n\r\nProcess gift card transaction;\r\n\r\nHelp us learn more about your shopping preferences; or conduct marketing and performance research to assist us in measuring our customer services, benchmarking our performance and to help us improve your shopping experiences and product offerings.\r\n\r\nAs provided below under Clause 7, you may always choose not to receive promotional materials or marketing information.\r\n\r\n\r\n<h3>WITH WHOM WE SHARE THE PERSONAL AND SENSITIVE INFORMATION</h3>\r\n\r\n<p>\r\nOnly the persons authorized by us shall have access to your Personal Information and Sensitive Information. We may share your Personal and Sensitive information with:\r\n\r\nOur affiliates \u2013 Service providers who perform services on our behalf based on our instructions which inter alia include beauty partners providing beauty services to the customers. However, these service providers will not be authorized to use or disclose such information except as necessary to perform services on our behalf or comply with legal requirements;\r\n\r\nOther third parties with your consent (e.g. Facebook applications may share information collected through those apps with your Facebook friends or other Facebook users).\r\n\r\nWe do not rent or sell your Personal and Sensitive Information to any third party. However, should we plan to merge/sell all or substantially all of our business to another business entity or similar other transaction or be required by that business entity, we may transfer or disclose your Personal Information and Sensitive Information to that business entity who may collect, use or disclose such information for the purposes of evaluating the proposed transaction or for operating and managing the affairs of the acquired business or for other purposes identified in this Policy.\r\n\r\nNotwithstanding anything contained in this Privacy Policy, we reserve the right to disclose any Personal Information or Sensitive Information that may be required to be disclosed mandatorily under applicable law or where the disclosure is necessary to comply with any legal obligation or to law enforcement authorities or other government officials, without prior notice or consent of the site / app user.\r\n\r\n</p>\r\n\r\n<h3>COOKIES</h3>\r\n\r\n<p>\r\nWe may track your preferences and activities on the Site. \u201cCookies\u201d are small data files transferred to your computer\u2019s hard-drive by a website. They keep a record of your activities on the Site making your subsequent visits to the site more efficient. Cookies may store a variety of information, including, the number of times that you access a site, registration information and the number of times that you view a particular page or other item on the site. The use of cookies is a common practice adopted by most major sites to better serve their clients. Most browsers are designed to accept cookies, but they can be easily modified to block cookies.\r\n\r\nBy continuing the use of the Site, you are agreeing to our use of cookies. If you do not agree to our use of cookie, you can block them in your browser setting, but you may lose some functionality on the Site.\r\n\r\n</p>\r\n\r\n<h3>HOW WE RETAIN OF SENSITIVE PERSONAL DATA OR INFORMATION</h3>\r\n\r\n<p>\r\nWe will retain your Personal and Sensitive Information only as long as it is reasonably required or otherwise permitted or required by applicable law or regulatory requirements. We may also retain your Personal and Sensitive Information so long as it is necessary to fulfil the purposes for which it was collected (including for purposes of meeting any legal, administrative, accounting, or other reporting requirements). Your Personal and Sensitive Information is safeguarded against inappropriate access and disclosure, as per this Privacy Policy.\r\n\r\nWe also maintain appropriate and adequate administrative, technical and physical safeguards designed to protect your Personal and Sensitive Information against accidental, unlawful or unauthorized destruction, loss, alteration, access, disclosure or use.\r\n\r\n<\\p>\r\n\r\n<h3>OPT-OUT</h3>\r\n\r\n<p>\r\nThe Site provides an option to all the users to opt-out of receiving any promotional or marketing communications from us. If you do not wish to receive any promotional or marketing communications from us, you can contact us at the address provided below.</p>\r\n\r\n\r\n<h3>WITHDRAWAL OF CONSENT</h3>\r\n\r\n<p>\r\nIf you have consented to the collection, use and/or disclosure of your Personal and Sensitive Information as identified in this Policy, you may withdraw the same at any time by communicating to us at the given below under Clause 11.\r\n\r\n</p>\r\n\r\n<h3>SECURITY</h3>\r\n\r\n<p>\r\nWe endeavour to keep your Personal and Sensitive information secure, up-to-date, accurate in the best possible manner as it may be necessary for the purpose for which it was collected. We value the importance you attach to your Personal and Sensitive Information given to us and therefore we have (i) taken all reasonable measures and precautions to keep such information safe and secure and to prevent any unauthorized access to or misuse of the same; and (ii) enable you to review and edit the same.\r\n\r\nHowever, we shall not be liable to any user for any loss, damage (whether direct, indirect, consequential or incidental) or harm caused to the user due to the unauthorized access or misuse of the Personal or Sensitive Information by any third party.\r\n\u201cBy using our website, you (the visitor) agree to allow third parties to process your IP address, in order to determine your location for the purpose of currency conversion. You also agree to have that currency stored in a session cookie in your browser (a temporary cookie which gets automatically removed when you close your browser). We do this in order for the selected currency to remain selected and consistent when browsing our website so that the prices can convert to your (the visitor) local currency.\u201d\r\n\r\n</p>\r\n\r\n<h3>CONTACT INFORMATION</h3>\r\n\r\n<p>\r\nCustomer Service Desk\r\n\r\nE-mail id: \r\n\r\nPh. No.:  +91 74172 23643\r\n                +91 8279779012\r\n                +91 8433075625\r\n\r\nContact Days: Monday to Saturday (09.00 a.m. to 07:00 p.m.) \r\n"
+        },
+        "returns_and_replacement_policy": {
+            "name": "Returns & Replacemet",
+            "title": "RETURNS & REPLACEMENTS",
+            "content": "<p>\r\nfoodsense takes pride in making sure the customer gets what he sees and sees what he expects. Each and every product of ours will be comprehensively tested and tried. On grounds of production deformities and shortcomings, the customer will be entitled a complete no questions asked replacement. However, an exchange request can only be made within 2 days of receiving the order. On grounds of non-satisfaction of the customer, we will take the product back without any questions asked, provided we receive our material in uncompromising condition. Once product is received by us, it needs to pass inspection procedure to make sure the product is unused, unopened and in same condition as sent in. When all grounds are clear, we will dispatch then customer\u2019s desired exchanged product which should be of the same or higher order value as the returned order. Please note that only a part of the order cannot be exchanged. Please allow 10-12 working days for the entire exchange process to be completed.\r\n</p>\r\n\r\n<p>\r\nIn case of COD orders, the shipping + COD charges are non-refundable.\r\nNo refund, return or replacement will be made, if claim is raised after 7 days of delivery.\r\nNo refund, return or replacement will be made, if the product delivered is as per the order and not in damaged condition.\r\nReplacement will be accepted if the product is in damaged condition (Customer has to provide photos as valid proof)\r\nRefund will be processed to original payment method only\r\nAlpino reserves all rights to accept or reject return requests.\r\nCancellation\r\n</p>\r\n\r\n<p>\r\nEven though we do not have any discretions over orders being placed on our website by visitors, we do hold the eventual authority over fulfilling it. We might put an order on hold or cancel it if it is deemed fraudulent or malicious, without liability. We also reserve the right to refuse or cancel orders in scenarios like inaccuracies in pricing of product on the website and stock unavailability. We may also require additional verification or information before accepting any order. We may contact you if all or any portion of your order is cancelled or if additional information is required to accept your order. If your order is cancelled after your card has been charged, the said amount will be reversed to your account. Any promotional voucher used for the cancelled orders may not be refunded. Further, in case of suspicious transactions, we reserve the right to inform law enforcement officials and provide them with all transaction details that may be requested for investigation of any illegal activity.\r\n</p>\r\n\r\n<p>\r\nThe customer may cancel their order within 2 working days of placing it with us. Once order is shipped, it is not under our control to cancel it. </p>\r\n"
+        }
+    }
+}

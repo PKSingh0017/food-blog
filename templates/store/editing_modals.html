@@ -1,0 +1,605 @@
+{% load crispy_forms_tags %}
+
+
+<!-- ======= edit Hero ======= -->
+<div class="modal modal-right fade" id="updateHero" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit This Section</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'edit_hero' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            <div class="form-group">
+              <label for="session-title" class="col-form-label">Title:</label>
+              <input type="text" name="title" value="{{Hero.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Description:</label>
+              <input type="text" name="description" value="{{Hero.description}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Button text:</label>
+              <input type="text" name="button" value="{{Hero.button}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Video Link</label>
+              <input type="text" name="video_link" value="{{Hero.video_link}}" class="form-control">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ======= edit Hero ======= -->
+
+<!-- ======= edit about us ======= -->
+<div class="modal modal-right fade" id="updateAboutUs" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit "{{AboutUs.title}}" Section</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            <div class="form-group">
+              <label for="session-title" class="col-form-label"Title:</label>
+              <input type="text" name="title" value="{{AboutUs.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Description1:</label>
+              <input type="text" name="description1" value="{{AboutUs.description1}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">point1:</label>
+              <input type="text" name="point1" value="{{AboutUs.point1}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">point2:</label>
+              <input type="text" name="point2" value="{{AboutUs.point2}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">point3:</label>
+              <input type="text" name="point3" value="{{AboutUs.point3}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Description2:</label>
+              <input type="text" name="description2" value="{{AboutUs.description2}}" class="form-control">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Update Section</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ======= edit about us ======= -->
+
+<!-- ======= edit Why Us ======= -->
+<div class="modal modal-right fade" id="updateWhyUs" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit "{{WhyUs.title}}" section</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            <div class="form-group">
+              <label for="session-title" class="col-form-label">Session Title:</label>
+              <input type="text" name="title" value="{{WhyUs.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Session Description:</label>
+              <input type="text" name="description" value="{{WhyUs.description}}" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="Date" class="col-form-label">Question 1:</label>
+              <input type="text"  name="q1_q" value="{{WhyUs.q1.q}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="start-time" class="col-form-label">Answer:</label>
+              <input type="text" name="q1_a" value="{{WhyUs.q1.a}}" class="form-control" required>
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="Date" class="col-form-label">Question 2:</label>
+              <input type="text"  name="q2_q" value="{{WhyUs.q2.q}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="start-time" class="col-form-label">Answer:</label>
+              <input type="text" name="q2_a" value="{{WhyUs.q2.a}}" class="form-control" required>
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="Date" class="col-form-label">Question 3:</label>
+              <input type="text"  name="q3_q" value="{{WhyUs.q3.q}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="start-time" class="col-form-label">Answer:</label>
+              <input type="text" name="q3_a" value="{{WhyUs.q3.a}}" class="form-control" required>
+            </div>
+            
+            
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Update Session</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ======= edit Why Us ======= -->
+
+
+<!-- ======= edit Skills ======= -->
+<div class="modal modal-right fade" id="updateSkills" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit "{{Skills.title}}" Section</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            <div class="form-group">
+              <label for="session-title" class="col-form-label">Title:</label>
+              <input type="text" name="title" value="{{Skills.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Description:</label>
+              <input type="text" name="description" value="{{Skills.description}}" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Skill 1:</label>
+              <input type="text" name="skill1_name" value="{{Skills.skill1.name}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Skill Rating in "%":</label>
+              <input type="number" name="skill1_value" value="{{Skills.skill1.value}}" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Skill 2:</label>
+              <input type="text" name="skill2_name" value="{{Skills.skill2.name}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Skill Rating in "%":</label>
+              <input type="number" name="skill2_value" value="{{Skills.skill2.value}}" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Skill 3:</label>
+              <input type="text" name="skill3_name" value="{{Skills.skill3.name}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Skill Rating in "%":</label>
+              <input type="number" name="skill3_value" value="{{Skills.skill3.value}}" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Skill 1:</label>
+              <input type="text" name="skill4_name" value="{{Skills.skill4.name}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Skill Rating in "%":</label>
+              <input type="number" name="skill4_value" value="{{Skills.skill4.value}}" class="form-control">
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Update Section</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ======= edit Skills ======= -->
+
+
+<!-- ======= edit services ======= -->
+<div class="modal modal-right fade" id="updateServices" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit {{Services.title}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            <div class="form-group">
+              <label for="session-title" class="col-form-label">Session Title:</label>
+              <input type="text" name="title" value="{{Services.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Session Description:</label>
+              <input type="text" name="description" value="{{Services.description}}" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Service 1:</label>
+              <input type="text" name="service1_title" value="{{Services.service1.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Service Description:</label>
+              <input type="text" name="service1_description" value="{{Services.service1.description}}" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Service 2:</label>
+              <input type="text" name="service2_title" value="{{Services.service2.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Service Description:</label>
+              <input type="text" name="service2_description" value="{{Services.service2.description}}" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Service 3:</label>
+              <input type="text" name="service3_title" value="{{Services.service3.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Service Description:</label>
+              <input type="text" name="service3_description" value="{{Services.service3.description}}" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Service 4:</label>
+              <input type="text" name="service4_title" value="{{Services.service4.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Service Description:</label>
+              <input type="text" name="service4_description" value="{{Services.service4.description}}" class="form-control">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Update Session</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ======= edit services ======= -->
+
+<!-- ======= edit call to action ======= -->
+<div class="modal modal-right fade" id="updateCallToAction" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit "{{CTA.title}}" section</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            <div class="form-group">
+              <label for="session-title" class="col-form-label">Session Title:</label>
+              <input type="text" name="title" value="{{CTA.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Session Description:</label>
+              <input type="text" name="description" value="{{CTA.description}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Session Description:</label>
+              <input type="text" name="button" value="{{CTA.button}}" class="form-control">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Update Session</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ======= edit call to action ======= -->
+
+<!-- ======= edit Portfolio ======= -->
+<div class="modal modal-right fade" id="updatePortfolio" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add a New Session</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            <div class="form-group">
+              <label for="session-title" class="col-form-label">Session Title:</label>
+              <input type="text" name="title" value="{{session.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Session Description:</label>
+              <input type="text" name="description" value="{{session.description}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Date" class="col-form-label">Date of Session:</label>
+              <input type="date"  name="date" value="{{session.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="start-time" class="col-form-label">Start Time:</label>
+              <input type="time" name="start_time" value="{{session.title}}" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="end-time" class="col-form-label">End Time:</label>
+              <input type="time" name="end_time" value="{{session.title}}" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="Frequency" class="col-form-label">Frequency of Sessions:</label>
+                <select name="frequency" class="form-control" required="" id="id_frequency">
+                  <option value="{{session.frequency}}" selected="">{{session.get_frequency_display}}</option>
+
+                  <option value="FRI">Friday</option>
+
+                  <option value="MON">Monday</option>
+
+                  <option value="SAT">Saturday</option>
+
+                  <option value="WED">Wednesday</option>
+
+                  <option value="D">Daily</option>
+
+                  <option value="JO">Just Once</option>
+
+                  <option value="TUE">Tuesday</option>
+
+                  <option value="THU">Thursday</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Join-link" class="col-form-label">Joining Link:</label>
+                <input type="text" name="join_link" value="{{session.join_link}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="start-link" class="col-form-label">Starting Link:</label>
+                <input type="text" name="start_link" value="{{session.start_link}}" class="form-control">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Update Session</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ======= edit Portfolio ======= -->
+
+
+<!-- ======= edit Team ======= -->
+<div class="modal modal-right fade" id="updateTeam" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit "{{Team.Title}}" section</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            <div class="form-group">
+              <label for="session-title" class="col-form-label">Session Title:</label>
+              <input type="text" name="title" value="{{Team.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Session Description:</label>
+              <input type="text" name="description" value="{{Team.description}}" class="form-control">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Update Session</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ======= edit Team ======= -->
+
+<!-- ======= edit FREQUENTLY ASKED QUESTIONS ======= -->
+<div class="modal modal-right fade" id="updateFrequentlyAskedQuestions" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit "{{FAQ.title}}" section</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            <div class="form-group">
+              <label for="session-title" class="col-form-label">Session Title:</label>
+              <input type="text" name="title" value="{{FAQ.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Session Description:</label>
+              <input type="text" name="description" value="{{FAQ.description}}" class="form-control">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Update Session</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ======= edit FREQUENTLY ASKED QUESTIONS ======= -->
+
+<!-- ======= edit Contact ======= -->
+<div class="modal modal-right fade" id="updateContact" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit "{{Contact.title}}" section</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'edit_Contact' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            <div class="form-group">
+              <label for="session-title" class="col-form-label">Session Title:</label>
+              <input type="text" name="title" value="{{Contact.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Session Description:</label>
+              <input type="text" name="description" value="{{Contact.description}}" class="form-control">
+            </div>
+            <hr>
+            <h3>Address</h3>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Street:</label>
+              <input type="text" name="address_street" value="{{Contact.address.street}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">City:</label>
+              <input type="text" name="address_city" value="{{Contact.address.city}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Country:</label>
+              <input type="text" name="address_country" value="{{Contact.address.country}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Pin Code:</label>
+              <input type="text" name="address_pin" value="{{Contact.address.pin}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Location Link:</label>
+              <input type="text" name="location_link" value="{{Contact.address.location_link}}" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Phone Number:</label>
+              <input type="text" name="phone_number" value="{{Contact.phone_number}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="Session-description" class="col-form-label">Emial ID:</label>
+              <input type="text" name="email" value="{{Contact.email}}" class="form-control">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Update Section</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ======= edit Contact ======= -->
+
+<!-- ======= add client logo ======= -->
+<div class="modal modal-right fade" id="addClientLogo" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add new client logo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            {{AddNewClientForm|crispy}}
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Add Client</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ======= add lient logo ======= -->
+
+<!-- ======= add team member ======= -->
+<div class="modal modal-right fade" id="addTeamMember" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add a new team member</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'home' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            {{AddNewTeamMemberForm|crispy}}
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Add Member</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ======= add team member ======= -->
+
+<!-- ======= add FAQ ======= -->
+<div class="modal modal-right fade" id="addFrequentlyAskedQuestions" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add a new FAQ</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            {{ AddNewFAQForm|crispy }}
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ======= add FAQ ======= -->
+

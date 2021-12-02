@@ -1,0 +1,135 @@
+{% extends 'store/base.html' %} {% load static %} {% block content %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>{{object.name}}</h2>
+                <ol>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li>Product Details</li>
+                </ol>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-8">
+                    <!-- ======= Hero Section ======= -->
+                    <section id="hero">
+                        <div class="hero-container">
+                            <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel" data-bs-ride="carousel">
+
+                                <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <div class="img"><img class="d-block img-fluid" src="{{object.image1.url}}" alt="First slide"></div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="img"><img class="d-block img-fluid" src="{{object.image2.url}}" alt="First slide"></div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="img"><img class="d-block img-fluid" src="{{object.image3.url}}" alt="First slide"></div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="img"><img class="d-block img-fluid" src="{{object.image4.url}}" alt="First slide"></div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="img"><img class="d-block img-fluid" src="{{object.image5.url}}" alt="First slide"></div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="img"><img class="d-block img-fluid" src="{{object.image6.url}}" alt="First slide"></div>
+                                    </div>
+                                    
+
+                                </div>
+
+                                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+                                </a>
+
+                                <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </section>
+                    <!-- End Hero -->
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3>{{object.name}}</h3>
+                        <strong Style="padding-left: 5%;">Price: </strong>
+                        <span class="mr-1">
+                                    <del><small>Rs {{ object.price }} </small></del>
+                                </span>
+                        <span ><strong>Rs {{ object.actual_price }}</strong></span>
+
+                        <a style="margin-left: 10%;" href="{{ object.get_add_to_cart_url }}">
+                            <button class="btn btn-warning btn-md my-2 p waves-effect waves-light text-nowrap" href="{{ object.get_add_to_cart_url }}" type="submit">Add to cart
+                                <i class="fas fa-shopping-cart ml-1"></i>
+                            </button>
+                        </a>
+                        <br>
+                        <hr>
+                        <h3>Key Ingredients</h3>
+                        <ul>
+                            {% for ingredient in ingredients %}
+                            <li><strong>{{ingredient}}</strong></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="portfolio-description">
+                        <h2>
+                            Description
+                            <a href="#showMoreDescription" style="position: absolute; right:5%" class="mt-2 pl-2" style="color: #111;" data-toggle="collapse"><small><i class="bi bi-chevron-down"></small></i></a>
+                        </h2>
+                        <p>
+                            <div style="text-align: justify" id="showMoreDescription" class="collapse">
+                                {{object.description}}
+                            </div>
+                        </p>
+                        <hr>
+                        <h2>
+                            Other Details
+                            <a href="#otherDetails" style="position: absolute; right:5%" class="mt-2 pl-2" style="color: #111;" data-toggle="collapse"><small><i class="bi bi-chevron-down"></small></i></a>
+                        </h2>
+                        <p>
+                            <div id="otherDetails" class="collapse">
+                                <ul>
+                                    <li><strong>Weight: </strong>{{object.weight}} g</li>
+                                    <li><strong>Allegen Information: </strong>{{object.allergen_information}}</li>
+                                    <li><strong>Package Information: </strong>{{object.package_information}}</li>
+                                    <li><strong>Diet Type: </strong>{{object.diet_type}}</li>
+                                    <li><strong>Package Weight: </strong>{{object.package_weight}} g</li>
+                                    <li><strong>Nut Seed Type: </strong>{{object.nut_seed_type}}</li>
+                                    <li><strong>Form: </strong>{{object.form}}</li>
+                                </ul>
+                            </div>
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Portfolio Details Section -->
+
+</main>
+<!-- End #main -->
+<!-- End #main -->
+{% endblock %}

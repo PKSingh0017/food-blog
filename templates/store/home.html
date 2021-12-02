@@ -1,0 +1,278 @@
+ {% extends 'store/base.html' %} {% load static %} {% block content %}
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div class="hero-container">
+        <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+            <div class="carousel-inner" role="listbox">
+                {% for carausel in all_carausels %}
+                <div class="carousel-item {% if carausel.is_active %} active {% endif %}">
+                    <div class="img"><img class="d-block img-fluid" src="{{carausel.image.url}}" alt="First slide"></div>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="animate__animated animate__fadeInDown "><span class="text-dark">{{carausel.heading}}</span></h2>
+                        <p class="animate__animated animate__fadeInUp text-dark">
+                            {{carausel.description}}
+                        </p>
+                    </div>
+                  </div>
+                  {% endfor %}
+
+            </div>
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+            </a>
+
+        </div>
+    </div>
+</section>
+<!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= Whu Us Section ======= -->
+    <section id="why-us" class="why-us">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Buy <span>Our Peanut Butter</span></h2>
+                <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+            </div>
+
+            <div class="row">
+                {% for item in all_items %}
+                <div class="col-lg-4 center-block text-center">
+                    <div class="box">
+                        <div class="card border-light mb-3"><img src="{{item.image1.url}}" alt=""></div>
+                        <h4>{{item.name}}</h4>
+                        <a href="{% url 'product-detail' item.slug %}" class="btn-menu">
+                            <button type="button" class="btn btn-outline-success">Buy Now</button>
+
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Whu Us Section -->
+
+    <!-- ======= Specials Section ======= -->
+    <section id="specials" class="specials">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Check our <span>Recipes</span></h2>
+                <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="nav nav-tabs flex-column">
+                        {% for recipe in all_recipes %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if recipe.is_active %} active show{% endif %}" data-bs-toggle="tab" href="#recipe-{{recipe.id}}">{{recipe.title}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-lg-9 mt-4 mt-lg-0">
+                    <div class="tab-content">
+                        {% for recipe in all_recipes %}
+                        <div class="tab-pane {% if recipe.is_active %}active{% endif %} show" id="recipe-{{recipe.id}}">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>{{recipe.title}}</h3>
+                                    <p>{{recipe.description}}</p>
+                                    <small>
+                                        <a class="btn btn-outline-warning mb-3 " href="{{recipe.get_absolute_url}}" role="button" data-slide="next">
+                                            <strong>Read More</strong> <i class="fa fa-arrow-right"></i>
+                                        </a>
+                                    </small>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="{{recipe.image.url}}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Specials Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="specials">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Check our <span>Blog</span></h2>
+                <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="nav nav-tabs flex-column">
+                        {% for blog in all_blogs %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if blog.is_active %} active show{% endif %}" data-bs-toggle="tab" href="#blog-{{blog.id}}">{{blog.title}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-lg-9 mt-4 mt-lg-0">
+                    <div class="tab-content">
+                        {% for blog in all_blogs %}
+                        <div class="tab-pane {% if blog.is_active %} active show{% endif %}" id="blog-{{recipe.id}}">
+                            <div class="row">
+                                <div class="col-lg-8 details order-2 order-lg-1">
+                                    <h3>{{blog.title}}
+                                        
+                                    </h3>
+                                    <p>{{blog.description}}</p>
+                                    <small>
+                                        <a class="btn btn-outline-warning mb-3 " href="{{blog.get_absolute_url}}" role="button" data-slide="next">
+                                            <strong>Read More</strong> <i class="fa fa-arrow-right"></i>
+                                        </a>
+                                    </small>
+                                </div>
+                                <div class="col-lg-4 text-center order-1 order-lg-2">
+                                    <img src="{{blog.image.url}}" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Blog Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+        <div class="container position-relative">
+
+            <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper-wrapper">
+
+                    {% for testimonial in all_testimonials %}
+                    <div class="swiper-slide">
+                        <div class="testimonial-item">
+                            <img src="{{testimonial.image.url}}" class="testimonial-img" alt="">
+                            <h3>{{testimonial.name}}</h3>
+                            <h4>{{testimonial.position}}</h4>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>{{testimonial.content}}
+                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End testimonial item -->
+                    {% endfor %}
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <h2><span>Contact</span> Us</h2>
+                <p>
+                    {{Contact.description}}
+                </p>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="info-wrap">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 info">
+                        <a href="#map"><i class="bi bi-geo-alt"></i></a>
+                        <h4>Location:</h4>
+                        <p>{{Contact.address.street}}<br>{{Contact.address.city}}, {{Contact.address.country}} {{Contact.address.pin}}</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+                        <i class="bi bi-clock"></i>
+                        <h4>Open Hours:</h4>
+                        <p>Monday-Saturday:<br>11:00 AM - 2300 PM</p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+                        <a href="mailto:{{Contact.email}}"><i class="bi bi-envelope"></i></a>
+                        
+                        <h4>Email:</h4>
+                        <p>{{Contact.email}}<br></p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+                        <a href="tel:{{Contact.phone_number}}"><i class="bi bi-phone"></i></a>
+                        <h4>Call:</h4>
+                        <p>{{Contact.phone_number}}<br></p>
+                        
+                    </div>
+                    {% if user.is_superuser %}
+                    <div>
+                        <p>
+                            <i class="bx bx-edit-alt" style="cursor:pointer" title="Edit This Section" data-toggle="modal" data-target="#updateContact"></i>
+                        </p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <form action="{% url 'contact_us' %}" method="POST" role="form" class="php-email-form">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6 form-group mt-3 mt-md-0">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group mt-3">
+                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+        </div>
+
+        <div id="map" class="map mt-5">
+            <iframe style="border:0; width: 100%; height: 350px;" src="{{Contact.address.location_link}}"
+                frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+
+</main>
+<!-- End #main -->
+{% endblock %}

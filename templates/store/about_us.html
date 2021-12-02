@@ -1,0 +1,52 @@
+{% extends "store/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+<main class="mt-lg-5 mb-lg-5" style="font-size: 1.5rem;">
+  <div class="container shadow-3-strong pt-3 rounded">
+    <div class="card bg-success">
+      <h2 class="my-1 h2 text-center" style="color: white;">About Us</h2>
+    </div>
+    <div class="row p-lg-5 p-4 pl-5 ml-lg-1 ml-xl-1">
+
+      <!-- mobile view -->
+      <ul class="d-lg-none d-xl-none" style="font-size: 1rem;">
+        <li>
+          Imam Ahmed Raza Academy is situated in Swaleh Nagar in the city of Bareilly has been serving the
+          Muslim Ummah since 1999 under the guidance of His Eminence Mahir-i-Razawiyat, Hadhrat Allama Mufti
+          Muhammad Haneef Khan Razvi Sahib Qibla.
+        </li>
+        <br>
+        <li>
+          We aim to build a healthy society for the coming generations
+          by spreading education and awareness among the people.
+        </li>
+        <br>
+        <li>
+          Our main services are publications, training
+          programs, educational seminars and awareness camps.
+        </li>
+      </ul>
+
+      <!-- laptop view -->
+      <ul class="d-lg-block d-md-block d-xl-block d-none">
+        <li>
+          Imam Ahmed Raza Academy situated in Swaleh Nagar in the city of Bareilly has been serving the
+          Muslim Ummah since 1999 under the guidance of His Eminence Mahir-i-Razawiyat, Hadhrat Allama Mufti
+          Muhammad Haneef Khan Razvi Sahib Qibla.
+        </li>
+        <li>
+          We aim to build a healthy society for the coming generations
+          by spreading education and awareness among the people.
+        </li>
+        <li>
+          Our main services are publications, training
+          programs, educational seminars and awareness camps.
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+{% endblock content %}

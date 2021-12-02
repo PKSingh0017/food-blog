@@ -1,0 +1,80 @@
+{% extends "store/base.html" %}
+{% load crispy_forms_tags %}
+{% load bleach_tags %}
+{% load static %}
+{% block innerpage_navbar %}header-inner-pages{% endblock %}
+{% block content %}
+<main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'home' %}">{{doc_object.name}}</a></li>
+
+        </ol>
+        <h2>
+          {{doc_object.title}}
+          {% if user.is_superuser %}
+            <i class="bx bx-edit-alt" style="cursor:pointer" title="Edit This Page" data-toggle="modal" data-target="#editPage"></i>
+          {% endif %}
+        </h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+        <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
+                {{doc_object.content|bleach}}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Portfolio Details Section -->
+</main>
+<!-- ======= edit Page ======= -->
+<div class="modal fade bd-example-modal-xl" id="editPage" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Edit This Page</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="{% url 'edit_docs' doc_object_name %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            <div class="form-group">
+              <label for="session-title" class="col-form-label">Name:</label>
+              <input type="text" name="doc_name" value="{{doc_object.name}}" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="session-title" class="col-form-label">Title:</label>
+              <input type="text" name="doc_title" value="{{doc_object.title}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="Session-description" class="col-form-label">Page Content:</label>
+                <textarea rows="20" cols="50" name="doc_content" class="form-control">{{doc_object.content}}</textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- ======= edit Page ======= -->
+{% endblock %}
